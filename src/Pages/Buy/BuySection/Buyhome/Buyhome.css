@@ -1,0 +1,95 @@
+#buyhome{
+    background: #fff;
+}
+.buyhome_wrapper{
+    width: 100%;
+    position: relative;
+}
+.buyhome_wrapper_head_box{
+    padding: 20px 0;
+    text-align: left;
+}
+.buyhome_wrapper_head{
+    font-size: 38px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    line-height: 150%;
+}
+.buyhome_wrapper_sort{
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+.buyhome_wrapper_listing{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(74, 145, 74);
+    cursor: pointer;
+    padding-left: 8px;
+}
+.buyhome_wrapper_flex{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+
+}
+.buyhome_image_wrapper_flex{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 40px;
+}
+.buyhome_image_wrapper_box{
+    width: 380px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.buyhome_image_box{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.buyhome_image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.buyhome_image_details_box{
+    margin: 20px;
+}
+.buyhome_image_details_box_head{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.buyhome_image_details_box_details{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000ab;
+    margin-bottom: 10px;
+}
+.buyhome_image_details_box_mls{
+    font-size: 12px;
+    font-weight: 400;
+    color: #00000083;
+}
+.buyhome_map_box{
+    width: 400px;
+    height: 100vh;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 444;
+    right: 0;
+    top: 0;
+}
+.buyhome_map_box iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
