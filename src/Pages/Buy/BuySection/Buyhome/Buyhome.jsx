@@ -70,6 +70,42 @@ let arraybuy = [
         number : "Atlanta, GA 30342",
         mls :"COMPASS, MLS#7317491"
     },
+    {
+        id : 1,
+        img :homeone ,
+        price : "$1,275,000",
+        bd : "5bd 5ba 4,642 sqft (on 0.30 acres)",
+        serial : "1247 Mayfair Dr,",
+        number : "Atlanta, GA 30324",
+        mls : "PEACHTREE REALTORS, LLC., MLS#7329306"
+    },
+    {
+        id : 2,
+        img :hometwo ,
+        price : "$764,000",
+        bd : "3bd 4ba 1,604 sqft",
+        serial : "1970 Dekalb Ave #9,",
+        number :"Atlanta, GA 30324",
+        mls : "KELLER WILLIAMS PREMIER, MLS#7329586"
+    },
+    {
+        id : 3,
+        img : homethree,
+        price :"$445,000",
+        bd : "4bd 3ba 2,262 sqft (on 0.35 acres)",
+        serial : "1960 Enon Mill Dr SW,",
+        number : "Atlanta, GA 30331",
+        mls : "MARK SPAIN REAL ESTATE, MLS#7329537"
+    },
+    {
+        id : 4,
+        img :homefour ,
+        price :"$849,900" ,
+        bd : "3bd 3ba 2,786 sqft",
+        serial :"244 Locust St NE #A," ,
+        number :"Atlanta, GA 30317" ,
+        mls :   "COLDWELL BANKER REALTY, MLS#7328755"
+    },
 ]
 
 const Buyhome = () => {

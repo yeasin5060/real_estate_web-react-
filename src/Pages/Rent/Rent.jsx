@@ -1,8 +1,11 @@
 import React from 'react'
+import Renthome from './RentSection/Renthome/Renthome'
 
 const Rent = () => {
   return (
-    <div>Rent</div>
+    <>
+      <Renthome/>
+    </>
   )
 }
 
