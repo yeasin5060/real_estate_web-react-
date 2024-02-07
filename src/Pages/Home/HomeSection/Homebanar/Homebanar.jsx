@@ -1,5 +1,5 @@
 import React from 'react'
-import './homebanar.css'
+import './Homebanar.css'
 import Heading from '../../../../Utilities/Heading/Heading'
 import { Link } from 'react-router-dom'
 import { IoSearch } from "react-icons/io5";
