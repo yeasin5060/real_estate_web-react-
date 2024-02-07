@@ -1,13 +1,23 @@
 #mortgagebanar{
-    padding: 200px 0;
-    background: url(../../../../../../../public/svgone.svg);
+    width: 100%;
+    height: 600px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+}
+#mortgagebanar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .mortgagebanar_wrapper{
     width: 800px;
     margin: 0 auto;
+    position: absolute;
+    left: 50% ;
+    top: 50%;
+    transform: translate(-50% , -50%);
 }
 .mortgagebanar_head_box{
     margin-bottom: 20px;

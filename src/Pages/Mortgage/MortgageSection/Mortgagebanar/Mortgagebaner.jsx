@@ -2,10 +2,12 @@ import React from 'react'
 import "./Mortgagebanar.css"
 import Miniheading from '../../../../Utilities/Miniheading/Miniheading'
 import Pera from '../../../../Utilities/Pera/Pera'
+import svgone from '../../../../images/svgone.svg'
 
 const Mortgagebaner = () => {
   return (
     <section id='mortgagebanar'>
+        <img src={svgone} alt="not found" />
         <div className='container'>
             <div className='mortgagebanar_wrapper'>
                 <div className='mortgagebanar_head_box'>
