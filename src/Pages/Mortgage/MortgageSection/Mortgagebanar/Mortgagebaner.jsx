@@ -1,5 +1,5 @@
 import React from 'react'
-import "./mortgagebanar.css"
+import "./Mortgagebaner.css"
 import Miniheading from '../../../../Utilities/Miniheading/Miniheading'
 import Pera from '../../../../Utilities/Pera/Pera'
 
