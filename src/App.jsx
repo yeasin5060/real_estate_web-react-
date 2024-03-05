@@ -11,6 +11,8 @@ import Rent from "./Pages/Rent/Rent";
 import Mortgage from "./Pages/Mortgage/Mortgage";
 import Savedhomes from "./Pages/Savedhomes/Savedhomes";
 import Savedsearch from "./Pages/Savedsearch/Savedsearch";
+import firebaseConfig from "./firebaseconfig";
+import Errpage from "./Pages/Errpage/Errpage";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +25,7 @@ function App() {
             <Route path="/savedhomes" element ={<Savedhomes/>}/>
             <Route path="/savedsearches" element ={<Savedsearch/>}/>
           </Route>
+          <Route path="*" element = {<Errpage/>}/>
         </Route>
     )
   );

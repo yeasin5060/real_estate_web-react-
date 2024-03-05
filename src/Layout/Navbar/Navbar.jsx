@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import dreamlogo from '../../images/dream_home_logo.jpg'
@@ -10,7 +10,7 @@ import TextField from '@mui/material/TextField';
 import { IoClose } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-
+import { getAuth, sendSignInLinkToEmail } from "firebase/auth";
 
 const style = {
   position: 'absolute',
@@ -24,11 +24,48 @@ const style = {
 };
 
 const Navbar = () => {
+  const auth = getAuth();
+  let [userData , setUserData] = useState({
+    email : ""
+  })
+  let [error , setError] = useState({
+    email : ""
+  })
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   let forgetclose = ()=>{
     setOpen(false)
+  }
+  let emailhandel = (e)=>{
+    let {name , value }=e.target
+      setUserData({...userData,[name]:value})
+  }
+
+  let emailregex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+  let emailsubmil = ()=>{
+     if (!userData.email){
+      setError({email:"Email is Require"});
+    }
+    else if (!userData.email.match(emailregex)){
+      setError({email:" "});
+      setError({email:"Inter valid Email"});
+    }else{
+      setError({email:" "});
+      sendSignInLinkToEmail(auth, userData.email, actionCodeSettings)
+      .then(() => {
+        
+        window.localStorage.setItem('emailForSignIn', email);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ...
+      });
+    }
   }
   return (
     <section id='navbar'>
@@ -82,10 +119,11 @@ const Navbar = () => {
                 <Nanoheading text="Email" style="signuporlogin_contant_email"/>
               </div>
               <div className='signuporlogin_input_box'>
-                <TextField id="outlined-basic" name='email' type='email' label="Email" variant="outlined" />
+                <TextField id="outlined-basic" name='email' type='email' label="Email" variant="outlined"  onChange={emailhandel}/>
+                {error.email && <p className='email_errror'>{error.email}</p>}
               </div>
               <div className='signuporlogin_btn_box'>
-                  <button className='signuporlogin_btn'>Submit</button>
+                  <button onClick={emailsubmil} className='signuporlogin_btn'>Submit</button>
               </div>
               <div className='signuporlogin_fb_box'>
                 <button className='signuporlogin_fb'> <FaFacebookF className='signuporlogin_fb_icon' /> Continue with Facebook</button>
